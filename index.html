@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>測試頁面 2 - 橙紅漸層</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', '微軟正黑體', sans-serif;
+            background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg, #ff6b6b 0%, #ffa500 100%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+            margin-top: 12vh;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2.5rem;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            transform: perspective(1000px) rotateX(10deg);
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            background: rgba(255,255,255,0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            color: #444;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>活力測試頁面 2</h1>
+        <div class="description">
+            <p>這裡是第二個測試頁面，採用了<span class="highlight">溫暖的橙紅色調</span>設計。這種配色方案能夠傳達出活力、創意和熱情的氛圍，非常適合用於展示創意項目或者需要吸引注意力的內容。</p>
+            <br>
+            <p>頁面運用了雙層漸層效果，創造出豐富的視覺層次。白色的內容區域提供了良好的閱讀體驗，而橙紅色的背景則為整個設計注入了生命力。這樣的搭配既保持了專業性，又不失趣味性。</p>
+            <br>
+            <p>適合用於品牌展示、創意作品集或者任何需要<span class="highlight">充滿活力感覺</span>的測試頁面。</p>
+        </div>
+    </div>
+</body>
+</html>
